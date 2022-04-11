@@ -16,12 +16,12 @@ namespace Basket.API.Controllers
     public class BasketController : ControllerBase
     {
         private readonly IBasketRepository _basketRepository;
-        private readonly DiscountGrpcService _discountGrpcService;
+        private readonly IDiscountGrpcService _discountGrpcService;
         private readonly IPublishEndpoint _publishEndpoint;
         private readonly IMapper _mapper;
 
         public BasketController(IBasketRepository basketRepository,
-            DiscountGrpcService discountGrpcService,
+            IDiscountGrpcService discountGrpcService,
             IPublishEndpoint publishEndpoint,
             IMapper mapper)
         {
